@@ -1,0 +1,106 @@
+/* Basic Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+.header h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Navigation using Flexbox */
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main layout using CSS Grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* content takes more space than sidebar */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Content */
+.content {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Sidebar using Flexbox for cards */
+.sidebar {
+    background-color: #e2e2e2;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sidebar-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Stack main content and sidebar vertically */
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 0.25rem;
+    }
+}
